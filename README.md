@@ -3,12 +3,12 @@
 
 PaginationUIManager
 ============
-**PaginationUIManager** is a quite handy library for pagination in iOS. It also offers custom PullToRefresh View.
+**PaginationUIManager** is quite a handy library for pagination in iOS. It also offers custom PullToRefresh View.
 
 Features
 ------------
  - Ease to implement Pagination.
- - Choise of using custom refreshing animation for pull-to-refresh or basic (default provided by iOS).
+ - Choice of using custom refreshing animation for pull-to-refresh or basic (default provided by iOS).
  - Bottom loader (if there is more data to load) is automatically managed.
 
 Installation
@@ -18,7 +18,7 @@ Installation
 
 > `$ sudo gem install cocoapods`
 
-If you wish to integrate PaginationUIManager in your project, the make following changes in your `Podfile`:
+If you wish to integrate PaginationUIManager in your project, then make following changes in your `Podfile`:
 
     source 'https://github.com/Nickelfox/PaginationUIManager.git'
     platform :ios, '9.0'
@@ -29,7 +29,7 @@ After saving `Podfile`. Run following command:
     pod install
 
 #### <i class="icon-pencil"></I>**Manually**
-If you don't want to use any dependency manager in your project, you can install this library manually too.
+If you don't want to use any dependency manager in your project, you can also install this library manually.
 Just add the following lines to your `Podfile`:
 
     pod "PaginationUIManager", :git => 'https://github.com/Nickelfox/PaginationUIManager.git'
@@ -40,7 +40,7 @@ After saving Podfile, run following:
 
 Usage
 ---------
-It's very simple to use PaginationUIManager. What all you need is just to create a variable of type **PaginationUIManager**.
+It's very simple to use PaginationUIManager. All you need is to create a variable of type **PaginationUIManager**.
 
     fileprivate var paginationUIManager: PaginationUIManager?
     
@@ -50,13 +50,13 @@ While initialising, PaginationUIManager requires the UIScrollView(or its subclas
     self.paginationUIManager = PaginationUIManager(scrollView: self.tableView, pullToRefreshType: .basic)
 ```
 
-Also, we need to set the delegate of **paginationUIManager**.
+Also, we need to set the `delegate` property of **paginationUIManager**.
 
 ```swift
     self.paginationUIManager?.delegate = self
 ```
 
-The ViewController in which we're initialising PaginationUIManager, it must conform **PaginationUIManagerDelegate**.
+The ViewController in which we're initialising PaginationUIManager, it must conform to **PaginationUIManagerDelegate**.
 
 ```swift
     extension ViewController: PaginationUIManagerDelegate {
@@ -90,7 +90,7 @@ states are the cases of enum **PullToRefreshViewState**.
         case closing
     }
 ```
-If you're using this on `UICollectionView`, then make sure you've enabled paging and set `alwaysBounceVertical` property 
+If you're using this on `UICollectionView`, make sure you've enabled paging and set `alwaysBounceVertical` property 
 of `UICollectionView` to `true`.
 
 
